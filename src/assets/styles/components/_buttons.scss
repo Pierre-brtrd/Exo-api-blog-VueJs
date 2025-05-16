@@ -1,0 +1,93 @@
+@use "../abstracts/variables" as *;
+@use "sass:color";
+
+%btn {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1.3;
+    appearance: none;
+
+    padding: 0.5rem 1rem;
+    border-radius: $border-radius;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: inherit;
+
+    &.disabled,
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+
+.btn-primary {
+    @extend %btn;
+    background: $secondary;
+    box-shadow: 0 0 5px color.scale($secondary, $lightness: -20%);
+    color: $white;
+    border: none;
+
+    &:not(:disabled):hover {
+        background: color.scale($secondary, $lightness: -20%);
+        color: $white;
+    }
+}
+
+.btn-secondary {
+    @extend %btn;
+    background: $primary;
+    box-shadow: 0 0 5px color.scale($primary, $lightness: -20%);
+    color: $white;
+    border: none;
+
+    &:not(:disabled):hover {
+        background: color.scale($primary, $lightness: -20%);
+        color: $white;
+    }
+}
+
+.btn-success {
+    @extend %btn;
+    background: $success;
+    box-shadow: 0 0 5px color.scale($success, $lightness: -20%);
+    color: $white;
+    border: none;
+
+    &:not(:disabled):hover {
+        background: color.scale($success, $lightness: -20%);
+        color: $white;
+    }
+}
+
+.btn-danger {
+    @extend %btn;
+    background: $danger;
+    box-shadow: 0 0 5px color.scale($danger, $lightness: -20%);
+    color: $white;
+    border: none;
+
+    &:not(:disabled):hover {
+        background: color.scale($danger, $lightness: -20%);
+        color: $white;
+    }
+}
+
+.btn-warning {
+    @extend %btn;
+    background: $warning;
+    box-shadow: 0 0 5px color.scale($warning, $lightness: -20%);
+    color: $white;
+    border: none;
+
+    &:not(:disabled):hover {
+        background: color.scale($warning, $lightness: -20%);
+        color: $white;
+    }
+}
+
+.btn-fixed {
+    position: absolute;
+    top: calc($header-height + 2rem);
+    left: 5%;
+}

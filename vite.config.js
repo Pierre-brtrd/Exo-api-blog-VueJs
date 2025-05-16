@@ -17,6 +17,13 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@use "@/assets/styles/abstracts/index" as *;',
+      },
+    },
+  },
   server: {
     https: {
       key: fs.readFileSync(path.resolve('./', 'certs', 'localhost+2-key.pem')),

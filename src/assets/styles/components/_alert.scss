@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as *;
+@use "sass:color";
+
+%alert {
+    position: fixed;
+    bottom: 5%;
+    right: 0;
+    z-index: 100;
+    border-radius: $border-radius 0 0 $border-radius;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.alert-danger {
+    @extend %alert;
+    border: 1px solid $danger;
+    background: $danger;
+    box-shadow: 0 0 15px 10px color.adjust($danger, $alpha: -0.6);
+    color: $white;
+}
+
+.alert-success {
+    @extend %alert;
+    border: 1px solid $success;
+    background: $success;
+    box-shadow: 0 0 15px 10px color.adjust($success, $alpha: -0.6);
+    // background: color.adjust($success, $alpha: -0.4);
+    color: $white;
+}
+
+.alert-warning {
+    @extend %alert;
+    border: 1px solid $warning;
+    background: $warning;
+    box-shadow: 0 0 15px 10px color.adjust($warning, $alpha: -0.6);
+    color: $white;
+}
+
+.alert-info {
+    @extend %alert;
+    border: 1px solid $info;
+    background: $info;
+    box-shadow: 0 0 15px 10px color.adjust($info, $alpha: -0.6);
+    color: $white;
+}
