@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as *;
+@use "sass:color";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: $secondary;
+    transition: color 0.3s ease;
+    display: inline-block;
+
+    &:hover {
+        color: color.scale($secondary, $lightness: -30%);
+    }
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img,
+video,
+picture,
+figure {
+    max-width: 100%;
+}

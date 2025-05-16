@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as *;
+
+html,
+body {
+    scroll-behavior: smooth;
+    scroll-padding: calc($header-height + 1rem);
+}
+
+body {
+    color: $white;
+    background: $dark-soft;
+    font-size: $default-font-size;
+}
